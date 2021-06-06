@@ -1,14 +1,15 @@
-import React from 'react';
-import { Htag, P, Button, Tag } from '../components';
+import React, { useState, useEffect } from 'react';
+import { Htag, P, Button, Tag, Rating } from '../components';
 
 
 export default function Home(): JSX.Element {
+   const [rating, setRating] = useState<number>(0)
 
 
    return (
       <div>
-         <Htag tag='h1'>Text</Htag>
-         <Button appearance='primary' arrow='right'>Button</Button>
+         <Htag tag='h1'>Hello</Htag>
+         <Button appearance='primary' arrow='right' >Button</Button>
          <Button appearance='ghost' arrow='down'>Button</Button>
          <P size='l'>Biggest</P>
          <P size='m'>Middle</P>
@@ -19,6 +20,7 @@ export default function Home(): JSX.Element {
          <Tag size='m' color='green'>Green-M</Tag>
          <Tag size='m' color='grey'>Grey-M</Tag>
          <Tag size='m' color='primary' href='https://github.com/AlariCode/top-app-demo/blob/main/next.config.js'>Primary-M</Tag>
+         <Rating rating={rating} isEditable setRating={setRating} />
       </div>
    );
 }
