@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Htag, P, Button, Tag, Rating } from '../components';
+import { Layout, withLayout } from './../Layout/Layout';
 
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
    const [rating, setRating] = useState<number>(0)
 
 
    return (
-      <div>
+      <>
          <Htag tag='h1'>Hello</Htag>
          <Button appearance='primary' arrow='right' >Button</Button>
          <Button appearance='ghost' arrow='down'>Button</Button>
@@ -21,6 +22,8 @@ export default function Home(): JSX.Element {
          <Tag size='m' color='grey'>Grey-M</Tag>
          <Tag size='m' color='primary' href='https://github.com/AlariCode/top-app-demo/blob/main/next.config.js'>Primary-M</Tag>
          <Rating rating={rating} isEditable setRating={setRating} />
-      </div>
+      </>
    );
 }
+
+export default withLayout(Home)
