@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Htag, P, Button, Tag, Rating } from '../components';
-import { Layout, withLayout } from './../Layout/Layout';
+import { withLayout } from './../Layout/Layout';
 
 
 function Home(): JSX.Element {
